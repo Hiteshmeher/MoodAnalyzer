@@ -1,24 +1,17 @@
 package com.bridgelabz.moodanalyzer;
 
 public class MoodAnalyzer {
-    public String message;
-
-    public MoodAnalyzer(String message){
-    this.message = message;
+    public static String analyzeMood(String message){
+        if (message.contains("sad"))
+            return "SAD";
+        else if (message.contains("happy"))
+            return "HAPPY";
+        else
+            return null;
     }
-    public String AnalyzeMood() throws MoodAnalyzerException{
-        try {
-            if (message.length() == 0){
-                throw new MoodAnalyzerException(MoodAnalyzerException.ExceptionType.Entered_Empty,"Enter a message");
-            }
-            if (message.contains("Sad")) {
-                return "Sad";
-            } else {
-                return "Happy";
-            }
-        } catch (NullPointerException e) {
-            throw new MoodAnalyzerException(MoodAnalyzerException.ExceptionType.Entered_Null,"Invalid mood");
-        }
-
+    public static void main(String[] args) {
+       MoodAnalyzer mood = new MoodAnalyzer();
+       System.out.println(mood.analyzeMood("i am in sad mood"));
+       System.out.println(mood.analyzeMood("i am in happy mood"));
     }
 }

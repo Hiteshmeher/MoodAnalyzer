@@ -8,14 +8,16 @@ public class MoodAnalyzerTest {
     @Test
     // Test case for return SAD if message contains sad
     void messageSad_returnSad(){
-        String result = MoodAnalyzer.analyzeMood("I am in sad mood");
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in sad mood");
+        String result = moodAnalyzer.analyzeMood();
         System.out.println(result);
         Assertions.assertEquals("SAD" , result);
     }
     @Test
     // Test case for Return Happy if message doesnot contain sad
     void messageAnyThing_ReturnHappy(){
-        String result = MoodAnalyzer.analyzeMood("I am in Any Mood");
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in any mood");
+        String result = moodAnalyzer.analyzeMood();
         System.out.println(result);
         Assertions.assertEquals("HAPPY", result);
     }

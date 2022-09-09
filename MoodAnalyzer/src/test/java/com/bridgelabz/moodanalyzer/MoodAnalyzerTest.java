@@ -13,12 +13,12 @@ public class MoodAnalyzerTest {
         System.out.println(result);
         Assertions.assertEquals("SAD" , result);
     }
-    @Test
-    // Test case for Return Happy if message doesnot contain sad
-    void messageAnyThing_ReturnHappy(){
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in any mood");
-        String result = moodAnalyzer.analyzeMood();
-        System.out.println(result);
-        Assertions.assertEquals("HAPPY", result);
-    }
+//    @Test
+//    // Test case for Return Happy if message doesnot contain sad
+//    void messageAnyThing_ReturnHappy(){
+//        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in any mood");
+//        String result = moodAnalyzer.analyzeMood();
+//        System.out.println(result);
+//        Assertions.assertEquals("HAPPY", result);
+//   }
 }

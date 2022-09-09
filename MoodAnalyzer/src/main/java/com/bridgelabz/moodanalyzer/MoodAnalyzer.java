@@ -8,10 +8,17 @@ public class MoodAnalyzer {
         analyzeMood();
     }
     public String analyzeMood(){
-        if (message.contains("sad"))
-            // if message contains sad it will return sad
-            return "SAD";
-        else // if message will not contain sad then it will return Happy
-            return "HAPPY";
+        try {
+            if (message.contains("sad"))
+                // if message contains sad it will return sad
+                return "SAD";
+            else if (message.contains("happy"))
+                // if message will not contain sad then it will return Happy
+                return "HAPPY";
+        }
+        catch (NullPointerException e){
+            System.out.println("Enter Valid Mood");
+        }
+        return " ";
     }
 }

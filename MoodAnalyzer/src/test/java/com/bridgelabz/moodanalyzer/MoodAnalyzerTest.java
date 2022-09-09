@@ -21,11 +21,18 @@ public class MoodAnalyzerTest {
         System.out.println(result);
         Assertions.assertEquals("HAPPY", result);
    }
+//   @Test
+//    void messageNull_ReturnInvalid(){
+//        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("null");
+//        String result = moodAnalyzer.analyzeMood();
+//        System.out.println(result);
+//        Assertions.assertEquals(" ", result);
+//   }
    @Test
-    void messageNull_ReturnInvalid(){
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("null");
+    void messageNull_ReturnHappy(){
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer(" ");
         String result = moodAnalyzer.analyzeMood();
         System.out.println(result);
-        Assertions.assertEquals(" ", result);
+        Assertions.assertEquals("HAPPY", result);
    }
 }
